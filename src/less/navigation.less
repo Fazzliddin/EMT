@@ -1,0 +1,94 @@
+// Навигация
+
+.nav {
+
+    a {
+        text-decoration: none;
+    }
+    
+    ul {
+        .row-flex();
+        justify-content: space-between;
+    }
+    
+    li {
+        list-style: none;
+        text-transform: uppercase;
+        color: @color_text;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 21px;
+
+       
+    }
+
+    .nav__search {
+        background-color: @color_blue;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    .nav__btn {
+        background-color: @color_blue;
+        color: #fff;
+        text-decoration: none;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+}
+
+.burger {
+
+    span {
+        width: 19px;
+        height: 2px;
+        background-color: @color_blue;
+        display: block;
+        margin: 2px 0;
+        padding: 0;
+    }
+}
+
+.nav__drop {
+    position: relative;
+    
+    a {
+        color: @color_text;
+    }
+
+    div {
+        margin-top: -50px;
+        position: absolute;
+        transition: all .2s;
+        // opacity: 0;
+        z-index: -1;
+        background-color: @color_darkBlue;
+        div {
+            position: static;
+            padding: 5px 10px;
+            color: #eee6f3;
+
+            &:hover {
+                background-color: @color_blue;
+                cursor: pointer;
+            }
+        }
+    }
+    &:hover {
+        
+        div {
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+}
